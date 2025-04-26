@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,96 +7,89 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" type="image/png" href="drone.png"/>
-    <meta name="og:image" 			content="image/dji-flip-sewa-drone-pdrtechnology.webp" />
-    <meta property="og:image"     	content="image/dji-flip-sewa-drone-pdrtechnology.webp" />
-
-    <meta name="ROBOTS" 			content="index"/>
-    <meta name="Author" 			content="@lamhotsimamora | PDR Technology | Deratek.id" />
-    <meta name="copyright" 			content="Copyright@2025 | All Right Reserved" />
-    <meta property="og:title" 		content="Jasa Shooting Sewa Drone" />
+    <meta property="og:image" content="image/dji-flip-sewa-drone-pdrtechnology.webp" />
+    <meta name="ROBOTS" content="index"/>
+    <meta name="Author" content="@lamhotsimamora | PDR Technology | Deratek.id" />
+    <meta name="copyright" content="Copyright@2025 | All Right Reserved" />
+    <meta property="og:title" content="Jasa Shooting Sewa Drone" />
     <meta property="og:description" content="Menerima jasa shooting reals, story, tiktok, 4k video" />
-    <meta property="og:name"      	content="Jasa Sewa Drone" />
-    <meta name="language" 		  	content="Indonesian, English" />
+    <meta property="og:name" content="Jasa Sewa Drone" />
+    <meta name="language" content="Indonesian, English" />
 </head>
-
 <body class="bg-gray-100">
-  <div id="app" class="p-4">
+<div id="app" class="p-4">
     <header class="bg-white shadow p-4 mb-6">
-      <h1 class="text-2xl font-bold text-gray-800">PDR Drone - Sewa Drone DJI Flip</h1>
-      <p class="text-gray-600">Solusi drone profesional untuk kebutuhan Anda</p>
-      <p class="text-gray-500 mt-1">Alamat: PT KDA Sei Pelakar, Sidodadi, Bathin VIII, Kab. Sarolangun, Jambi</p>
-      <p class="text-gray-500 mt-1">Whatsapp : <a href="http://wa.me/+6281399453242">081399453242</a></p>
+        <h1 class="text-2xl font-bold text-gray-800">PDR Drone - Sewa Drone DJI Flip</h1>
+        <p class="text-gray-600">Solusi drone profesional untuk kebutuhan Anda</p>
+        <p class="text-gray-500 mt-1">Alamat: PT KDA Sei Pelakar, Sidodadi, Bathin VIII, Kab. Sarolangun, Jambi</p>
+        <p class="text-gray-500 mt-1">Whatsapp: <a href="http://wa.me/+6281399453242" class="text-blue-500">081399453242</a></p>
     </header>
 
     <main class="container mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div v-for="drone in drones" :key="drone.id" class="bg-white rounded-xl shadow-md overflow-hidden">
-          <img :src="drone.image" alt="drone.name" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h2 class="text-lg font-semibold">{{ drone.name }}</h2>
-            <p class="text-sm text-gray-500">{{ drone.description }}</p>
-            <p class="text-xl font-bold text-blue-600 mt-2">{{ drone.price }}</p>
-            <button @click="goToWa" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              Sewa Sekarang
-            </button>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div v-for="drone in drones" :key="drone.id" class="bg-white rounded-xl shadow-md overflow-hidden">
+                <img :src="drone.image" :alt="drone.name" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">{{ drone.name }}</h2>
+                    <p class="text-sm text-gray-500">{{ drone.description }}</p>
+                    <p class="text-xl font-bold text-blue-600 mt-2">{{ drone.price }}</p>
+                    <button @click="goToWa" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Sewa Sekarang
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <section class="mt-10 bg-white p-6 rounded-xl shadow-md">
-        <h2 class="text-xl font-semibold text-gray-800 mb-2">Video Pengenalan</h2>
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe class="w-full h-80" src="https://www.youtube.com/embed/KmEdcFcJUuo" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </section>
+        <section class="mt-10 bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Video Pengenalan</h2>
+            <div class="aspect-video">
+                <iframe class="w-full h-80" src="https://www.youtube.com/embed/KmEdcFcJUuo" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
 
-
-      <section class="mt-10 bg-white p-6 rounded-xl shadow-md">
-        <h2 class="text-xl font-semibold text-gray-800 mb-2">Tentang Kami</h2>
-        <p class="text-gray-600">PDR Drone adalah penyedia layanan sewa drone DJI terpercaya di Jambi. Kami menyediakan berbagai jenis drone untuk keperluan dokumentasi, pemetaan, inspeksi, hingga produksi video sinematik. Komitmen kami adalah memberikan pelayanan terbaik dengan peralatan berkualitas tinggi dan operator berpengalaman.</p>
-      </section>
-
-
+        <section class="mt-10 bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Tentang Kami</h2>
+            <p class="text-gray-600">
+                PDR Drone adalah penyedia layanan sewa drone DJI terpercaya di Jambi. Kami menyediakan berbagai jenis drone untuk keperluan dokumentasi, pemetaan, inspeksi, hingga produksi video sinematik. Komitmen kami adalah memberikan pelayanan terbaik dengan peralatan berkualitas tinggi dan operator berpengalaman.
+            </p>
+        </section>
     </main>
 
     <footer class="text-center text-gray-600 mt-10">
-      <p>&copy; 2025 PDR Drone. All rights reserved.</p>
+        <p>&copy; 2025 PDR Drone. All rights reserved.</p>
     </footer>
-  </div>
+</div>
 
-  <script>
-    const { createApp } = Vue;
+<script>
+const { createApp } = Vue;
 
-    createApp({
-      data() {
+createApp({
+    data() {
         return {
-          drones: [
-            {
-              id: 1,
-              name: 'DJI Flip',
-              description: 'Drone kecil dengan kemampuan luar biasa, cocok untuk pemula hingga profesional.',
-              price: 'Rp 600.000/20 menit',
-              image: 'image/dji-flip-sewa-drone-pdrtechnology.webp'
-            },
-              {
-
-                  id : 2,
-                  name : 'DJI Flip',
-                  description : 'Drone kecil dengan kemampuan luar biasa 4K.',
-                  price : 'Rp 300.000/10 menit',
-                  image 'image/dji-flip-sewa-drone-pdrtechnology.webp'
-
-              }
-          ]
+            drones: [
+                {
+                    id: 1,
+                    name: 'DJI Flip',
+                    description: 'Drone kecil dengan kemampuan luar biasa, cocok untuk pemula hingga profesional.',
+                    price: 'Rp 600.000/20 menit',
+                    image: 'image/dji-flip-sewa-drone-pdrtechnology.webp'
+                },
+                {
+                    id: 2,
+                    name: 'DJI Flip',
+                    description: 'Drone kecil dengan kemampuan luar biasa 4K.',
+                    price: 'Rp 300.000/10 menit',
+                    image: 'image/dji-flip-sewa-drone-pdrtechnology.webp'
+                }
+            ]
         }
-      },
-      methods: {
-        goToWa: function(){
-            window.location.href="http://wa.me/+6281399453242";
+    },
+    methods: {
+        goToWa() {
+            window.location.href = "http://wa.me/+6281399453242";
         }
-      },
-    }).mount('#app');
-  </script>
+    }
+}).mount('#app');
+</script>
 </body>
-
 </html>
