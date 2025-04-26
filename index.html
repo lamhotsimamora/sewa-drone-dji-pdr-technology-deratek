@@ -36,7 +36,7 @@
           <div class="p-4">
             <h2 class="text-lg font-semibold">{{ drone.name }}</h2>
             <p class="text-sm text-gray-500">{{ drone.description }}</p>
-            <p class="text-xl font-bold text-blue-600 mt-2">Rp {{ drone.price.toLocaleString() }}/ 20 menit</p>
+            <p class="text-xl font-bold text-blue-600 mt-2">Rp {{ drone.price.toLocaleString() }}</p>
             <button @click="goToWa" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
               Sewa Sekarang
             </button>
@@ -76,7 +76,7 @@
               id: 1,
               name: 'DJI Flip',
               description: 'Drone kecil dengan kemampuan luar biasa, cocok untuk pemula hingga profesional.',
-              price: 600000,
+              price: 'Rp 600.000/20 menit',
               image: 'image/dji-flip-sewa-drone-pdrtechnology.webp'
             },
               {
@@ -84,7 +84,7 @@
                   id : 2,
                   name : 'DJI Flip',
                   description : 'Drone kecil dengan kemampuan luar biasa 4K.',
-                  price : 300000,
+                  price : 'Rp 300.000/10 menit',
                   image 'image/dji-flip-sewa-drone-pdrtechnology.webp'
 
               }
