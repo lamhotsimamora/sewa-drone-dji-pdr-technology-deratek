@@ -36,7 +36,7 @@
           <div class="p-4">
             <h2 class="text-lg font-semibold">{{ drone.name }}</h2>
             <p class="text-sm text-gray-500">{{ drone.description }}</p>
-            <p class="text-xl font-bold text-blue-600 mt-2">Rp {{ drone.price.toLocaleString() }}</p>
+            <p class="text-xl font-bold text-blue-600 mt-2">{{ drone.price }}</p>
             <button @click="goToWa" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
               Sewa Sekarang
             </button>
